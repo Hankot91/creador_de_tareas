@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TODO App</title>
+  <link rel="icon" type="image/png" href="./assets/rocket.svg" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>        
+  <main>
+    <div class="mainCard">
+      <div class="title"><img src="./assets/rocket.svg" /></div>
+      <div>
+        <form class="contentForm">
+          <input type="text" name="task" placeholder="Nombre de la tarea" 
+          class="inputForm" autocomplete="off" data-form-text  maxlength="30"/>
+          <button type="submit" class="btnCreate" data-form-btn>
+            Agregar <i class="fas fa-plus-circle"></i>
+          </button>
+        </form>
+      </div>
+      <ul class="cardsList"  data-task-list>
+      </ul>
+    </div>
+    <section class="deleteConfirmationPop" data-popup>
+      <article class="deleteContentPop">
+        <article class="popMain">
+          <p class="texto">¿Quieres eliminar esta tarea?</p>
+        </article>
+        <article class="popFooter">
+          <button class="deleteConfirm" title="Confirmar" data-form-confirm>Confirmar</button>
+          <button class="cancelarConfirm" title="Cancelar" data-form-cancel>Cancelar</button>
+        </article>
+      </article>
+    </section>
+  </main>
+  <script type= "module" src="script.js"></script>
+</body>
+
+</html>

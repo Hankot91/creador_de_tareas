@@ -1,0 +1,237 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Dosis', sans-serif;
+  font-size: 1rem;
+}
+
+main {
+  background-image: linear-gradient(
+    109.6deg,
+    rgba(62, 161, 219, 1) 11.2%,
+    rgba(93, 52, 236, 1) 100.2%
+  );
+
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mainCard {
+  border-radius: 1.563rem;
+  background-color: #fff;
+}
+
+.title {
+  font-family: 'Dosis', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  margin-bottom: 0.938rem;
+}
+
+.contentForm {
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+  display: flex;
+  margin-bottom: 0.938rem;
+}
+
+.inputForm {
+  border: none;
+  padding: 0.625rem;
+  border: 0.063rem solid #eee;
+  outline: none;
+  width: 70%;
+}
+
+.btnCreate{
+  padding: 0.625rem 0.938rem;
+  background-image: linear-gradient(
+    109.6deg,
+    rgba(62, 161, 219, 1) 11.2%,
+    rgba(93, 52, 236, 1) 100.2%
+  );
+  border: none;
+  color: #fff;
+  border-radius: 0.313rem;
+  cursor: pointer;
+}
+
+.cardsList {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  max-height: 60vh;
+  height: 60vh;
+}
+
+.card {
+  width: 90%;
+  padding: 0.938rem;
+  box-shadow: 2px 4px 4px 4px rgba(71, 71, 71, 0.16);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0.313rem 0;
+  overflow: hidden;
+  background-image: linear-gradient(to right, rgba(112, 240, 86, 0.767) 0%, rgba(112, 240, 86, 0.767) 0%);
+  background-size: 0% 100%;
+  background-repeat: no-repeat;
+  transition: background-size 1.25s ease-in-out;
+}
+
+.mainCard.popup-active {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+
+.card.green {
+  background-size: 100% 100%;
+}
+
+.contentTask{
+  overflow-x: scroll;
+  overflow-y: hidden;
+  flex-grow: 1;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.task {
+  padding: 0.625rem;
+  word-wrap: break-word;
+  white-space: pre-line;
+}
+
+.actionIcons{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 18%;
+}
+
+.editInput{
+  margin-left: 0.625rem;
+  text-overflow: ellipsis;
+  width: 75%;
+  border: none;
+  border: 0.063rem solid #eee;
+  outline: none;
+}
+
+.icon, .iconEdit, .cancelarConfirm {
+  cursor: pointer;
+}
+
+.iconEdit:hover{
+  font-size: 1.22rem;
+}
+
+.icon:hover {
+  color: rgba(62, 161, 219, 1);
+}
+
+.completeIcon {
+  color: rgba(62, 161, 219, 1);
+}
+
+.trashIcon:hover {
+  color: #f00;
+}
+
+.deleteConfirmationPop {
+  display: none;
+  position: absolute;
+  background-color: rgba(255, 255, 255);
+  box-shadow: 2px 4px 4px 4px rgba(71, 71, 71, 0.16);
+  border-radius: 1.563rem;
+  z-index: 1;
+}
+
+.deleteContentPop{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  height: 100%;
+}
+
+.popFooter{
+  display: flex;
+  width: 80%;
+  justify-content: space-around;
+}
+
+.deleteConfirm, .cancelarConfirm{
+  padding: 0.625rem;
+  border: none;
+  color: #fff;
+  border-radius: 0.313rem;
+  cursor: pointer;
+}
+
+.deleteConfirm{
+  background-image: linear-gradient(
+    109.6deg,
+    rgba(62, 161, 219, 1) 11.2%,
+    rgba(93, 52, 236, 1) 100.2%
+  );
+}
+
+.cancelarConfirm{
+  padding-left: 0.83rem;
+  padding-right: 0.83rem;
+  background: linear-gradient(
+    109.6deg,
+    rgba(222,39,39,1) 11.2%,
+    rgba(242,24,0,1) 100.2%
+    );
+}
+
+.noTasks {
+  font-size: 3rem;
+}
+
+
+@media screen and (max-width: 767px){
+  .contentForm{
+    flex-direction: column;
+  }
+
+  .mainCard {
+    width: 82vw;
+    padding: 0.563rem;
+  }
+
+  .deleteConfirmationPop{
+    height: 5rem;
+    width: 90%;
+  }
+}
+
+@media screen and (min-width: 768px){
+  .contentForm{
+    flex-direction: row;
+  }
+
+  .mainCard {
+    width: 60vw;
+    padding: 1.563rem;
+  }
+
+  .deleteConfirmationPop{
+    width: 25rem;
+    height: 20rem;
+  }
+}
