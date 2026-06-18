@@ -1,4 +1,4 @@
-const editContent = () => {
+const editContent = (onEdit) => {
     const i = document.createElement('i');
     i.classList.add('fa-solid', 'fa-pen-to-square', 'iconEdit');
     i.setAttribute('title', 'Editar');
@@ -28,6 +28,8 @@ const editContent = () => {
 
             const div = input.parentNode;
             div.replaceChild(span, input);
+
+            if (onEdit) onEdit();
         }
     });
 

@@ -1,4 +1,4 @@
-const checkContent = () => {
+const checkContent = (onToggle) => { 
     const i = document.createElement('i');
     i.classList.add('far', 'fa-check-square', 'icon');
     i.setAttribute('title', 'Completada');
@@ -10,10 +10,10 @@ const checkContent = () => {
         element.classList.toggle('far');
         const card = element.closest('.card');
         card.classList.toggle('green');
+        if (onToggle) onToggle(); 
     });
 
     return i;
 }
-
 
 export default checkContent;
