@@ -2,7 +2,8 @@
 
 A minimal task manager built with **Vanilla JavaScript (ES Modules)**, HTML5 and CSS3. Tasks persist between sessions using `localStorage` — no frameworks, no dependencies.
 
-**Live demo:** [add your GitHub Pages URL here]
+**Live demo:** [https://hankot91.github.io/creador_de_tareas/]
+
 
 ## Features
 
